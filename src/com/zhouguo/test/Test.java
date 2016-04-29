@@ -20,6 +20,7 @@ public class Test {
 			System.out.println("conflict remote...");
 			System.out.println("conflict2 local");
 			System.out.println("conflict2 remote...");
+			System.out.println("push test ....");
 		}
 	}
 }
