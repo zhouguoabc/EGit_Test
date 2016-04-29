@@ -1,30 +1,25 @@
 package com.zhouguo.test;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
-public class QuestionTest {
-
-	@Test
-	public void test() {
-		int[] arr = new int[]{12,8,13,2,6,1,15,21};
-		for (int i = 0; i < arr.length - 1; i++) {
-			int num = i;
-			for (int j = i; j < arr.length; j++) {
-				if(arr[num] > arr[j]){
-					num = j;
-				}
-			}
-			if(num != i){
-				int tmp = arr[num];
-				arr[num] = arr[i];
-				arr[i] = tmp;
-			}
-		}
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
+class Singlton{
+	
+	private static Singlton instance = null;
+	Singlton(){ }
+	{
+		if(instance == null){
+			instance = new Singlton();
 		}
 	}
-
+	public static Singlton getInstance(){
+		return instance;
+	}
 }
+
+class SingltonTest{
+	public static void main(String[] args) {
+		Singlton s1 = new Singlton();
+		Singlton s2 = new Singlton();
+		System.out.println(s1.hashCode());
+		System.out.println(s2.hashCode());
+	}
+}
+
