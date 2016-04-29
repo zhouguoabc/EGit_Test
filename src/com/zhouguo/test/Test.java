@@ -17,6 +17,7 @@ public class Test {
 			System.out.print(arr[i] + " ");
 			System.out.println("github update... 01");
 			System.out.println("conflict local");
+			System.out.println("conflict remote...");
 		}
 	}
 }
