@@ -18,6 +18,7 @@ public class Test {
 			System.out.println("github update... 01");
 			System.out.println("conflict local");
 			System.out.println("conflict remote...");
+			System.out.println("conflict2 local");
 		}
 	}
 }
